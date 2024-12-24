@@ -51,7 +51,7 @@
         }
 
         button:hover {
-            background-color: #2d6a4f;
+            background-color: #b92d2d;
         }
         .greeting-card {
             display: none;
@@ -153,15 +153,21 @@
        
         <div class="question" id="questionOne">
             <h1>Quiss #1</h1>
-            <p>Qual è la renna più famosa di Babbo Natale?</p> 
-            <button onclick="checkAnswer('giusta', this, 'questionTwo')">Rudolph</button>
-            <button onclick="checkAnswer('sbagliata')">Cometa</button>
+            <p>Qual è la tua pizza preferita?</p> 
+            <div class="image-container">
+                <img src="pizza.jpg" class="image">
+            </div>
+            <button onclick="checkAnswer('giusta', this, 'questionTwo')">Margherita</button>
+            <button onclick="checkAnswer('sbagliata')">Wurstel</button>
         </div>
         <div class="question" id="questionTwo">
             <h1>Quiss #2</h1>
             <p>Quale è la tua miglior caratteristica?</p>
-            <button onclick="checkAnswer('giusta', this, 'questionThree')">Essere monella</button>
+            <div class="image-container">
+                <img src="bambina.jpg" class="image">
+            </div>
             <button onclick="checkAnswer('sbagliata', this)">Saper cantare</button>
+            <button onclick="checkAnswer('giusta', this, 'questionThree')">Essere monella</button>
         </div>
         <div class="question" id="questionThree">
             <h1>Quiss #3</h1>
@@ -169,8 +175,8 @@
             <div class="image-container">
                 <img src="lontra.png" class="image">
             </div>
-            <button onclick="checkAnswer('sbagliata', this)">Formica</button>
             <button onclick="checkAnswer('giusta', this, 'questionFour')">Lontra</button>
+            <button onclick="checkAnswer('sbagliata', this)">Formica</button>
         </div>
 
         <div class="question" id="questionFour">
@@ -183,6 +189,39 @@
             <button onclick="checkAnswer('sbagliata', this)">Un canguro</button>
         </div>
 
+        <div class="question" id="questionFive">
+            <h1>Quiss #5</h1>
+            <p>Chi preferisci tra lui e me?</p>
+            <div class="image-container">
+                <img src="tim.jpg" class="image">
+            </div>
+            <button onclick="checkAnswer('giusta', this, 'questionSix')">Lui</button>
+            <button onclick="checkAnswer('giusta', this, 'questionSix')">Me</button>
+        </div>
+
+        <div class="question" id="questionSix">
+            <h1>Quiss #6</h1>
+            <p>Come si chiama questo cagnetto?</p>
+            <div class="image-container">
+                <img src="prezi.jpg" class="image">
+            </div>
+            <button onclick="checkAnswer('sbagliata', this)">Faustina</button>
+            <button onclick="checkAnswer('giusta', this, 'questionSeven')">Prezi</button>
+        </div>
+
+
+        <div class="question" id="questionSeven">
+            <h1>Quiss #7</h1>
+            <p>Cosa sei brava a cucire?</p>
+            <div class="image-container">
+                <img src="bala.jpg" class="image">
+            </div>
+            <button onclick="checkAnswer('sbagliata', this)">Calze</button>
+            <button onclick="checkAnswer('giusta', this, 'questionEight')">Balaclava</button>
+        </div>
+
+
+
         <div class="question" id="questionEight">
             <h1>Quiss #8</h1>
             <p>Cosa siamo noi due?</p>
@@ -194,10 +233,10 @@
         </div>
 
         <div class="question" id="questionNine">
-            <h1>Quiss #eb9500</h1>
+            <h1>Quiss #9</h1>
             <p>Cosa ho io che non hai tu?</p>
             <div class="image-container">
-                <img src="risata.jpg" class="image">
+                <img src="ale.jpg" class="image">
             </div>
             <button onclick="checkAnswer('giusta', this, 'questionTen')">Un Ipad</button>
             <button onclick="checkAnswer('sbagliata', this)">Un cuore</button>
@@ -244,9 +283,9 @@
             document.getElementById('questionThree').style.display = 'none';
             document.getElementById('questionOne').style.display = 'none';
             document.getElementById('questionFour').style.display = 'none';
-
-
-
+            document.getElementById('questionFive').style.display = 'none';
+            document.getElementById('questionSix').style.display = 'none';
+            document.getElementById('questionSeven').style.display = 'none';
             document.getElementById('questionEight').style.display = 'none';
             document.getElementById('questionNine').style.display = 'none';
             document.getElementById('questionTen').style.display = 'none';
@@ -270,7 +309,7 @@
         }
 
         function completeQuiz(){
-            document.getElementById('questionFive').style.display = 'none';
+            document.getElementById('questionTen').style.display = 'none';
             document.getElementById('container').style.background = 'transparent';
             document.getElementById('pergamenaContainer').style.display = 'block';
         }
